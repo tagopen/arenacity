@@ -493,9 +493,13 @@
   position: relative;
   display: inline-block;
   vertical-align: top;
-  margin-top: 4px;
+  margin-top: 7px;
+  margin-left: 20px;
   width: 128px;
   height: 128px;
+}
+.toolbar__item:first-of-type {
+  margin-left: 0;
 }
 .toolbar__item--1 {
   background-color: #364c61;
@@ -519,7 +523,7 @@
   background-color: #bf3a2b;
 }
 .toolbar__item--big {
-  width: 260px;
+  width: 281px;
 }
 .toolbar__ic {
   display: block;
@@ -538,4 +542,10 @@
 
 .slider {
   margin-top: 20px;
+}
+
+@media only screen and (min-width: 920px) {
+  .container {
+    width: 1080px !important;
+  }
 }
