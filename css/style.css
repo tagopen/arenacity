@@ -494,7 +494,7 @@
   display: inline-block;
   vertical-align: top;
   margin-top: 20px;
-  margin-left: 20px;
+  margin-left: 21px;
   width: 128px;
   height: 128px;
 }
@@ -542,6 +542,10 @@
 
 .slider {
   margin-top: 20px;
+}
+
+.map__picture {
+  margin: 0 auto;
 }
 
 @media only screen and (min-width: 920px) {
