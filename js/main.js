@@ -91,10 +91,21 @@ $('.dropdown, .dropup').each(function() {
 // Equal height
 /*$('.equial').equialHeight();*/
 
-/*$('.slider').slick({
-  dots: true,
+$('.carousel-2').slick({
+  dots: false,
+  arrows: false,
   infinite: true,
-  speed: 300,
+  autoPlay: true,
+  speed: 1500,
   slidesToShow: 1,
-  adaptiveHeight: true
-});*/
+  variableWidth: true
+});
+$('.map__slider').slick({
+  dots: false,
+  arrows: false,
+  infinite: true,
+  autoPlay: true,
+  speed: 1500,
+  slidesToShow: 1,
+  variableWidth: true
+});
