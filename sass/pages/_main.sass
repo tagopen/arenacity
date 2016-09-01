@@ -10,16 +10,14 @@
   height: 36px
   background: transparent url("../img/icons/map.png") no-repeat scroll 0 0
   +contain
-@each $ic in child
-  .ic-#{$ic}
-    +svgb(#{$ic}, 96, 96)
-@each $ic in dosug
+
+@each $ic in beauty
   .ic-#{$ic}
     +svgb(#{$ic}, 96, 96)
 @each $ic in cafe
   .ic-#{$ic}
     +svgb(#{$ic}, 96, 96)
-@each $ic in shoes
+@each $ic in child
   .ic-#{$ic}
     +svgb(#{$ic}, 96, 96)
 @each $ic in clothes
@@ -28,7 +26,19 @@
 @each $ic in cosmetic
   .ic-#{$ic}
     +svgb(#{$ic}, 96, 96)
+@each $ic in dosug
+  .ic-#{$ic}
+    +svgb(#{$ic}, 96, 96)
+@each $ic in furniture
+  .ic-#{$ic}
+    +svgb(#{$ic}, 96, 96)
 @each $ic in presents
+  .ic-#{$ic}
+    +svgb(#{$ic}, 96, 96)
+@each $ic in shoes
+  .ic-#{$ic}
+    +svgb(#{$ic}, 96, 96)
+@each $ic in sport
   .ic-#{$ic}
     +svgb(#{$ic}, 96, 96)
 +comment("home page style")
@@ -52,14 +62,20 @@
   padding-top: 20px
   &__item
     position: relative
-    display: inline-block
-    vertical-align: top
     margin-top: 20px
-    margin-left: 21px
-    width: 128px
+    padding-left: 15px
+    padding-right: 15px
+    width: 14.28571%
     height: 128px
-    &:first-of-type
-      margin-left: 0
+    float: left
+    &--big
+      width: 28.57142%
+  &__ic
+    display: block
+    +ica
+  &__link
+    display: block
+    height: 100%
     &--1
       background-color: #364c61
     &--2
@@ -74,13 +90,6 @@
       background-color: #344a61
     &--7
       background-color: #bf3a2b
-    &--big
-      width: 281px
-  &__ic
-    display: block
-    +ica
-  &__link
-    display: block
 .slider
   margin-top: 20px
 .map
