@@ -1,0 +1,295 @@
+/* Map */
+.map-keeper{
+  position: relative;
+}
+.map-bubble-title{
+  margin: 0;
+  color: #f03b40;
+  font-weight: normal;
+  clear: none;
+  font-size: 13px;
+  word-wrap: break-word;
+  margin-bottom: 10px;
+  padding-left: 150px;
+  min-width: 150px;
+}
+.map-bubble-title a{
+  color: #f03b40;
+  text-decoration: none;
+}
+.map-bubble-title a:hover{
+  color: #f03b40;
+  text-decoration: underline;
+}
+.map-bubble-logo{
+  width: 140px;
+  height: auto;
+  float: left;
+  margin-right: 10px;
+}
+.map-bubble-logo[src=""]{
+  display: none;
+}
+.map-bubble-logo[src=""]+.map-bubble-title,
+.map-bubble-logo[src=""]+.map-bubble-title+.map-bubble-descr{
+  padding-left: 0;
+}
+.map-bubble{
+  display: none;
+  z-index: 30;
+  position: absolute;
+  padding: 20px;
+  background: #fff;
+  margin-top: 10px;
+  max-width: 380px;
+  -webkit-box-shadow: 2px 2px 14px rgba(0,0,0,.5);
+  box-shadow: 2px 2px 14px rgba(0,0,0,.5);
+}
+.map-bubble-descr{
+  margin-top: 10px;
+  padding-left: 150px;
+  font-size: 13px;
+  color: #000;
+  margin-bottom: 0;
+}
+.map-bubble.cf:before{
+  visibility: visible;
+  content: '';
+  position: absolute;
+  display: block;
+  width: 12px;
+  height: 10px;
+  background: url(../img/icons/bubble-tile.png) no-repeat;
+  top: -10px;
+  left: 0;
+}
+.map-page .box{
+    display:none;
+}
+.map-page .box.visible{
+    display:block;
+}
+.map-page .tabs{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+.map-page .tabs a{
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 0;
+  margin-right: 20px;
+  font-size: 15px;
+  color: #000;
+  cursor: pointer;
+  border-bottom: 2px solid #fff;
+}
+.map-page .tabs a.current{
+  border-bottom-color: #ed1c24;
+  color: #ed1c24;
+}
+.additional-legend{
+  margin: 50px 0 30px 0; 
+  padding: 0;
+}
+.additional-legend-item{
+  list-style: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  padding-left: 37px;
+  position: relative;
+  margin-right: 20px;
+}
+.additional-legend-item:before{
+  content: '';
+  position: absolute;
+  display: block;
+  top: -3px;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  background: url(../img/icons/map-sprite.png) no-repeat;
+}
+.additional-legend-item.atm:before{
+  background-position: 0 0;
+}
+.additional-legend-item.stair:before{
+  background-position: -27px 0;
+}
+.additional-legend-item.escalator:before{
+  background-position: -54px 0;
+}
+.additional-legend-item.exchange:before{
+  background-position: -81px 0;
+}
+.additional-legend-item.wifi:before{
+  background-position: -108px 0;
+}
+.additional-legend-item.wc:before{
+  background-position: -135px 0;
+}
+.additional-legend-item.elevator:before{
+  background-position: -162px 0;
+}
+
+.main-legend {
+  padding: 30px 0 0;
+  border-top: 1px solid #E4E4E4;
+}
+.main-legend-column{
+  display: inline-block;
+  width: 310px;
+  margin-right: 20px;
+  vertical-align: top;
+}
+.legend-category{
+  margin-bottom: 30px;
+  border-left: 6px solid #fff;
+  padding-left: 30px;
+}
+
+
+svg a{
+  cursor: pointer;
+}
+svg a:focus {
+  outline: none;
+}
+svg a:hover *{
+  opacity:.7;
+}
+svg .cat-product *{
+  fill: #E30513;
+}
+.legend-category.product{
+  border-left-color: #E30513;
+}
+svg .cat-clothes *{
+  fill: #E5007D;
+}
+.legend-category.clothes{
+  border-left-color: #E5007D;
+}
+svg .cat-shoes *{
+  fill: #C01610;
+}
+.legend-category.shoes{
+  border-left-color: #C01610;
+}
+svg .cat-gifts *{
+  fill: #143C89;
+}
+.legend-category.gifts{
+  border-left-color: #143C89;
+}
+svg .cat-child *{
+  fill: #FFF7B2;
+}
+.legend-category.child{
+  border-left-color: #FFF7B2;
+}
+svg .cat-health *{
+  fill: #BCE3FA;
+}
+.legend-category.health{
+  border-left-color: #BCE3FA;
+}
+svg .cat-interior *{
+  fill: #B94E97;
+}
+.legend-category.interior{
+  border-left-color: #B94E97;
+}
+svg .cat-services *{
+  fill: #008136;
+}
+.legend-category.services{
+  border-left-color: #008136;
+}
+svg .cat-cafe *{
+  fill: #EF7C00;
+}
+.legend-category.cafe{
+  border-left-color: #EF7C00;
+}
+svg .cat-inter *{
+  fill: #009EE3;
+}
+.legend-category.inter{
+  border-left-color: #009EE3;
+}
+svg text{
+  pointer-events:none;
+}
+.legend-category-title{
+  font-size: 14px;
+  color: #000;
+  margin: 0 0 6px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+.legend-link{
+  display: block;
+  margin-top: 6px;
+  font-size: 14px;
+}
+.additional-legend-item{
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+.additional-legend-item:hover{
+  color: #f00;
+}
+.legend-link.active .legend-link-title{
+  color: #f00;
+}
+.legend-link span{
+  color: #777777;
+  margin-right: 15px;
+  display: inline-block;
+  min-width: 40px;
+}
+.legend-link span.legend-link-title{
+  color: #000;
+  margin-right: 0;
+  display: inline;
+}
+.popup-inner .map-page,
+.popup-inner .map-page svg{
+  width: 615px !important;
+}
+
+svg .map-wc,
+svg .map-elevator,
+svg .map-exchange,
+svg .map-stair,
+svg .map-wifi,
+svg .map-atm,
+svg .map-escalator{
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+svg .map-wc.hover,
+svg .map-elevator.hover,
+svg .map-exchange.hover,
+svg .map-stair.hover,
+svg .map-wifi.hover,
+svg .map-atm.hover,
+svg .map-escalator.hover{
+  stroke: blue;
+  stroke-opacity: .7;
+  stroke-width: 20px;
+  z-index: 500;
+  position: relative;
+}
+.legend-keeper{
+  margin-bottom: 50px;
+}

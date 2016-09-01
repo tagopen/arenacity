@@ -194,7 +194,7 @@
 /* S L I C K - S L I D E R    T H E M E    S T Y L E  */
 /* -------------------------------------------------- */
 .slick-loading .slick-list {
-  background: #fff url('../img/ajax-loader.gif') center center no-repeat;
+  background: #fff url('../img/ajax-loader.gif?1466975215') center center no-repeat;
 }
 
 /* Icons */
