@@ -121,31 +121,36 @@ $('.additional-legend-item').mouseover(function(){
   $('.map-keeper').find($map_class).attr("class", $map_selector);
 });
 
-$('.map-keeper [data-href]').focus( function() {
-  var $svg_width        = $(this)[0].getBBox().width,
-      $svg_height       = $(this)[0].getBBox().height,
-      $svg_top          = $(this).position().top,
-      $svg_left         = $(this).position().left,
-      $legend_link      = $(this).data('href'),
-      $legend_item      = $('.main-legend').find('[href=' + $legend_link + ']').find('.legend-link-title'),
-      $legend_descr     = $($legend_item).data('descr'),
-      $legend_url       = $($legend_item).data('url'),
-      $legend_url_text  = $($legend_item).text(),
-      $legend_logo      = $($legend_item).data('logo'),
-      $map_buble        = $('.map-bubble');
+$(document).ready(function () {
+  $('.map-keeper [data-href]').on('click', function() {
+    var $svg_width        = $(this)[0].getBBox().width,
+    $svg_height       = $(this)[0].getBBox().height,
+    $svg_top          = $(this).position().top,
+    $svg_left         = $(this).position().left,
+    $legend_link      = $(this).data('href'),
+    $legend_item      = $('.main-legend').find('[href=' + $legend_link + ']').find('.legend-link-title'),
+    $legend_descr     = $($legend_item).data('descr'),
+    $legend_url       = $($legend_item).data('url'),
+    $legend_url_text  = $($legend_item).text(),
+    $legend_logo      = $($legend_item).data('logo'),
+    $map_buble        = $('.map-bubble');
 
-      console.log($(this));
+    $map_buble.find('.map-bubble-logo').attr('src', $legend_logo);
+    $map_buble.find('.map-bubble-url').attr($legend_url);
+    $map_buble.find('.map-bubble-title a').attr('href', $legend_url);
+    $map_buble.find('.map-bubble-title a').text($legend_url_text);
+    $map_buble.find('.map-bubble-descr').text($legend_descr);
 
-      $map_buble.find('.map-bubble-logo').attr('src', $legend_logo);
-      $map_buble.find('.map-bubble-url').attr($legend_url);
-      $map_buble.find('.map-bubble-title a').attr('href', $legend_url);
-      $map_buble.find('.map-bubble-title a').text($legend_url_text);
-      $map_buble.find('.map-bubble-descr').text($legend_descr);
+    $map_buble.css('top', $svg_top + $svg_height / 2);
+    $map_buble.css('left', $svg_left + $svg_width / 2);
+    $map_buble.css('display', 'block');
 
-      $map_buble.css('top', $svg_top + $svg_height / 2);
-      $map_buble.css('left', $svg_left + $svg_width / 2);
-      $map_buble.css('display', 'block');
-}).blur( function () {
-  var $map_buble        = $('.map-bubble');
-  $map_buble.css('display', 'none');
+    $('.map-bubble').trigger('focus');
+  });
+
+  $('.map-bubble').on('blur', function(){
+    setTimeout(function () {
+      $($(this)).hide();
+      }, 500);
+  });
 });

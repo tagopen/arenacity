@@ -523,7 +523,8 @@
 }
 
 .toolbar {
-  padding-top: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 .toolbar__item {
   position: relative;
