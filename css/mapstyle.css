@@ -52,7 +52,7 @@
   color: #000;
   margin-bottom: 0;
 }
-.map-bubble.cf:before{
+.map-bubble.clearfix:before{
   visibility: visible;
   content: '';
   position: absolute;
