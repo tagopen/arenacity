@@ -10,6 +10,28 @@
   height: 36px
   background: transparent url("../img/icons/map.png") no-repeat scroll 0 0
   +contain
+.nav-tabs
+  border: 0 none
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover
+  border:
+    top: 0 none
+    right: 0 none
+    left: 0 none
+    bottom: 2px solid #ed1c24
+  color: #ed1c24
+.nav>li>a
+  color: #000
+  +transition(color .3s ease-out)
+  &:focus, 
+  &:hover
+    background: none
+    border-color: transparent
+    color: #ed1c24
+.modal-content
+  padding-left: 15px
+  padding-right: 15px
 
 @each $ic in beauty
   .ic-#{$ic}
@@ -120,6 +142,7 @@
     font-size: 10px
     color: #fff
     +transition( font-size .2s ease-out )
+
 +r(1080)
   .container
     width: 1050px
