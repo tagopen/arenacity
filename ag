@@ -1,49 +1,0 @@
-[33mcommit bd5623939a984a2ccf138b3e7b3f00d6600b852a[m
-Author: Security2431 <Artem2431@gmail.com>
-Date:   Fri Sep 2 22:02:09 2016 +0300
-
-    add section toolbar in index.html
-
-[1mdiff --git a/index.html b/index.html[m
-[1mindex a3fdba1..a7ccc2b 100644[m
-[1m--- a/index.html[m
-[1m+++ b/index.html[m
-[36m@@ -87,25 +87,21 @@[m
-     <section class="toolbar">[m
-       <div class="container">[m
-         <div class="row">[m
-[31m-          <div class="col-sm-12">[m
-[31m-          <div class="toolbar__item toolbar__item--1"><a class="toolbar__link" href="#"><i class="ic ic-child toolbar__ic"></i></a></div>[m
-[31m-          <div class="toolbar__item toolbar__item--2"><a class="toolbar__link" href="#"><i class="ic ic-dosug toolbar__ic"></i></a></div>[m
-[31m-          <div class="toolbar__item toolbar__item--3"><a class="toolbar__link" href="#"><i class="ic ic-cafe toolbar__ic"></i></a></div>[m
-[31m-          <div class="toolbar__item toolbar__item--4"><a class="toolbar__link" href="#"><i class="ic ic-shoes toolbar__ic"></i></a></div>[m
-[31m-          <div class="toolbar__item toolbar__item--5"><a class="toolbar__link" href="#"><i class="ic ic-clothes toolbar__ic"></i></a></div>[m
-[31m-          <div class="toolbar__item toolbar__item--6"><a class="toolbar__link" href="#"><i class="ic ic-cosmetic toolbar__ic"></i></a></div>[m
-[31m-          <div class="toolbar__item toolbar__item--7"><a class="toolbar__link" href="#"><i class="ic ic-presents toolbar__ic"></i></a></div>[m
-[31m-          </div>[m
-[32m+[m[32m          <div class="toolbar__item"><a class="toolbar__link toolbar__link--1" href="#"><i class="ic ic-beauty toolbar__ic"></i></a></div>[m[41m[m
-[32m+[m[32m          <div class="toolbar__item"><a class="toolbar__link toolbar__link--2" href="#"><i class="ic ic-cafe toolbar__ic"></i></a></div>[m[41m[m
-[32m+[m[32m          <div class="toolbar__item"><a class="toolbar__link toolbar__link--3" href="#"><i class="ic ic-child toolbar__ic"></i></a></div>[m[41m[m
-[32m+[m[32m          <div class="toolbar__item"><a class="toolbar__link toolbar__link--4" href="#"><i class="ic ic-clothes toolbar__ic"></i></a></div>[m[41m[m
-[32m+[m[32m          <div class="toolbar__item"><a class="toolbar__link toolbar__link--5" href="#"><i class="ic ic-cosmetic toolbar__ic"></i></a></div>[m[41m[m
-[32m+[m[32m          <div class="toolbar__item"><a class="toolbar__link toolbar__link--6" href="#"><i class="ic ic-dosug toolbar__ic"></i></a></div>[m[41m[m
-[32m+[m[32m          <div class="toolbar__item"><a class="toolbar__link toolbar__link--7" href="#"><i class="ic ic-furniture toolbar__ic"></i></a></div>[m[41m[m
-         </div>[m
-         <div class="row">[m
-[31m-          <div class="col-sm-12">[m
-[31m-          <div class="toolbar__item toolbar__item--1 toolbar__item--big"><a class="toolbar__link" href="#"><i class="ic ic-child toolbar__ic"></i></a></div>[m
-[31m-          <div class="toolbar__item toolbar__item--2"><a class="toolbar__link" href="#"><i class="ic ic-dosug toolbar__ic"></i></a></div>[m
-[31m-          <div class="toolbar__item toolbar__item--3"><a class="toolbar__link" href="#"><i class="ic ic-cafe toolbar__ic"></i></a></div>[m
-[31m-          <div class="toolbar__item toolbar__item--4"><a class="toolbar__link" href="#"><i class="ic ic-shoes toolbar__ic"></i></a></div>[m
-[31m-          <div class="toolbar__item toolbar__item--5"><a class="toolbar__link" href="#"><i class="ic ic-clothes toolbar__ic"></i></a></div>[m
-[31m-          <div class="toolbar__item toolbar__item--6"><a class="toolbar__link" href="#"><i class="ic ic-cosmetic toolbar__ic"></i></a></div>[m
-[31m-          </div>[m
-[32m+[m[32m          <div class="toolbar__item toolbar__item--big"><a class="toolbar__link toolbar__link--1" href="#"><i class="ic ic-child toolbar__ic"></i></a></div>[m[41m[m
-[32m+[m[32m          <div class="toolbar__item"><a class="toolbar__link toolbar__link--2" href="#"><i class="ic ic-dosug toolbar__ic"></i></a></div>[m[41m[m
-[32m+[m[32m          <div class="toolbar__item"><a class="toolbar__link toolbar__link--3" href="#"><i class="ic ic-cafe toolbar__ic"></i></a></div>[m[41m[m
-[32m+[m[32m          <div class="toolbar__item"><a class="toolbar__link toolbar__link--4" href="#"><i class="ic ic-presents toolbar__ic"></i></a></div>[m[41m[m
-[32m+[m[32m          <div class="toolbar__item"><a class="toolbar__link toolbar__link--5" href="#"><i class="ic ic-shoes toolbar__ic"></i></a></div>[m[41m[m
-[32m+[m[32m          <div class="toolbar__item"><a class="toolbar__link toolbar__link--6" href="#"><i class="ic ic-sport toolbar__ic"></i></a></div>[m[41m[m
-         </div>[m
-       </div>[m
-     </section>[m

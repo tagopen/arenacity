@@ -1,6 +1,8 @@
 /* Map */
 .map-keeper{
   position: relative;
+  width: 1010px;
+  margin: 0 auto;
 }
 .map-bubble-title{
   margin: 0;
@@ -291,5 +293,6 @@ svg .map-escalator.hover{
   position: relative;
 }
 .legend-keeper{
-  margin-bottom: 50px;
+  width: 1010px;
+  margin: 0 auto 50px;
 }

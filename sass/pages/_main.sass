@@ -94,8 +94,34 @@
 .slider
   margin-top: 20px
 .map
+  position: relative
+  padding-bottom: 30px
   &__picture
     margin: 0 auto
-+r(920)
+  &__link
+    position: relative
+    display: inline-block
+    cursor: pointer
+    &--hover
+      +coverdiv
+      background-color: #000
+      opacity: 0
+      +transition(opacity .3s ease-out)
+      &:hover
+        opacity: .8
+        .map
+          &__icon
+            font-size: 150px
+  &__icon
+    position: absolute
+    top: 50%
+    left: 50%
+    +transform(translate(-50%, -50%))
+    font-size: 10px
+    color: #fff
+    +transition( font-size .2s ease-out )
++r(1080)
   .container
-    width: 1080px !important
+    width: 1050px
+  .modal-lg
+    width: 1050px
