@@ -28,7 +28,7 @@ $('.carousel-2').slick({
   dots: false,
   arrows: false,
   infinite: true,
-  autoPlay: true,
+  autoplay: true,
   speed: 1500,
   slidesToShow: 1,
   variableWidth: true
@@ -38,7 +38,7 @@ $('.map__slider').slick({
   dots: false,
   arrows: false,
   infinite: true,
-  autoPlay: true,
+  autoplay: true,
   speed: 1500,
   slidesToShow: 1,
   variableWidth: true
