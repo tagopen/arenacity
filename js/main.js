@@ -81,4 +81,7 @@ $(document).ready(function () {
     $map_buble.show();
 
   });
+  $('.map-keeper [data-href]').on('blur', function(e) {
+    $map_buble.hide();
+  });
 });
