@@ -418,8 +418,8 @@
   -o-background-size: contain;
   background-size: contain;
   background-position: 50% 50%;
-  width: 96px;
-  height: 96px;
+  width: 86px;
+  height: 86px;
 }
 
 .ic-cafe:before {
@@ -430,8 +430,8 @@
   -o-background-size: contain;
   background-size: contain;
   background-position: 50% 50%;
-  width: 96px;
-  height: 96px;
+  width: 86px;
+  height: 86px;
 }
 
 .ic-child:before {
@@ -442,8 +442,8 @@
   -o-background-size: contain;
   background-size: contain;
   background-position: 50% 50%;
-  width: 96px;
-  height: 96px;
+  width: 86px;
+  height: 86px;
 }
 
 .ic-clothes:before {
@@ -454,8 +454,8 @@
   -o-background-size: contain;
   background-size: contain;
   background-position: 50% 50%;
-  width: 96px;
-  height: 96px;
+  width: 86px;
+  height: 86px;
 }
 
 .ic-cosmetic:before {
@@ -466,8 +466,8 @@
   -o-background-size: contain;
   background-size: contain;
   background-position: 50% 50%;
-  width: 96px;
-  height: 96px;
+  width: 86px;
+  height: 86px;
 }
 
 .ic-dosug:before {
@@ -478,8 +478,8 @@
   -o-background-size: contain;
   background-size: contain;
   background-position: 50% 50%;
-  width: 96px;
-  height: 96px;
+  width: 86px;
+  height: 86px;
 }
 
 .ic-furniture:before {
@@ -490,8 +490,8 @@
   -o-background-size: contain;
   background-size: contain;
   background-position: 50% 50%;
-  width: 96px;
-  height: 96px;
+  width: 86px;
+  height: 86px;
 }
 
 .ic-presents:before {
@@ -502,8 +502,8 @@
   -o-background-size: contain;
   background-size: contain;
   background-position: 50% 50%;
-  width: 96px;
-  height: 96px;
+  width: 86px;
+  height: 86px;
 }
 
 .ic-shoes:before {
@@ -514,8 +514,8 @@
   -o-background-size: contain;
   background-size: contain;
   background-position: 50% 50%;
-  width: 96px;
-  height: 96px;
+  width: 86px;
+  height: 86px;
 }
 
 .ic-sport:before {
@@ -526,8 +526,8 @@
   -o-background-size: contain;
   background-size: contain;
   background-position: 50% 50%;
-  width: 96px;
-  height: 96px;
+  width: 86px;
+  height: 86px;
 }
 
 /* ---------------------------------------- */
@@ -575,15 +575,65 @@
   display: block;
 }
 .toolbar__link {
+  position: relative;
   display: block;
   height: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
+  overflow: hidden;
+  font: 600 12px/14px Arial, sans-serif;
   color: #fff;
   text-align: center;
+  -webkit-box-shadow: inset 0px 0px 52px 35px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 0px 0px 52px 35px rgba(0, 0, 0, 0.25);
+  -ms-box-shadow: inset 0px 0px 52px 35px rgba(0, 0, 0, 0.25);
+  -o-box-shadow: inset 0px 0px 52px 35px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px 0px 52px 35px rgba(0, 0, 0, 0.25);
 }
 .toolbar__link:hover {
   text-decoration: none;
+}
+.toolbar__link:hover:before {
+  top: -50%;
+  left: -50%;
+}
+.toolbar__link:hover:after {
+  opacity: 0.35;
+}
+.toolbar__link:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  top: -100%;
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  background-color: #000;
+  opacity: 0.55;
+}
+.toolbar__link:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  -moz-transition: opacity 0.2s ease-out;
+  -o-transition: opacity 0.2s ease-out;
+  -webkit-transition: opacity 0.2s ease-out;
+  -ms-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+  background-color: #000;
+  opacity: 0;
 }
 .toolbar__link--1 {
   background-color: #364c61;
@@ -608,6 +658,7 @@
 }
 .toolbar__text {
   display: block;
+  padding-top: 5px;
   color: #fff;
 }
 

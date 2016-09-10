@@ -35,34 +35,34 @@
 
 @each $ic in beauty
   .ic-#{$ic}
-    +svgb(#{$ic}, 96, 96)
+    +svgb(#{$ic}, 86, 86)
 @each $ic in cafe
   .ic-#{$ic}
-    +svgb(#{$ic}, 96, 96)
+    +svgb(#{$ic}, 86, 86)
 @each $ic in child
   .ic-#{$ic}
-    +svgb(#{$ic}, 96, 96)
+    +svgb(#{$ic}, 86, 86)
 @each $ic in clothes
   .ic-#{$ic}
-    +svgb(#{$ic}, 96, 96)
+    +svgb(#{$ic}, 86, 86)
 @each $ic in cosmetic
   .ic-#{$ic}
-    +svgb(#{$ic}, 96, 96)
+    +svgb(#{$ic}, 86, 86)
 @each $ic in dosug
   .ic-#{$ic}
-    +svgb(#{$ic}, 96, 96)
+    +svgb(#{$ic}, 86, 86)
 @each $ic in furniture
   .ic-#{$ic}
-    +svgb(#{$ic}, 96, 96)
+    +svgb(#{$ic}, 86, 86)
 @each $ic in presents
   .ic-#{$ic}
-    +svgb(#{$ic}, 96, 96)
+    +svgb(#{$ic}, 86, 86)
 @each $ic in shoes
   .ic-#{$ic}
-    +svgb(#{$ic}, 96, 96)
+    +svgb(#{$ic}, 86, 86)
 @each $ic in sport
   .ic-#{$ic}
-    +svgb(#{$ic}, 96, 96)
+    +svgb(#{$ic}, 86, 86)
 +comment("home page style")
 .navbar-brand
   width: 100%
@@ -96,14 +96,47 @@
   &__ic
     display: block
   &__link
+    position: relative
     display: block
     height: 100%
     padding-top: 10px
     padding-bottom: 10px
+    overflow: hidden
+    font: 600 12px/14px Arial, sans-serif
     color: #fff
     text-align: center
+    +bs( inset 0px 0px 52px 35px rgba(0, 0, 0, 0.25) )
     &:hover
       text-decoration: none
+      &:before
+        top: -50%
+        left: -50%
+      &:after
+        opacity: .35
+    &:before
+      content: ''
+      position: absolute
+      display: block
+      width: 100%
+      height: 100%
+      left: -100%
+      top: -100%
+      +rotate(-45)
+      +transition(all .2s ease-out)
+      background-color: #000
+      opacity: .55
+    &:after
+      content: ''
+      position: absolute
+      display: block
+      width: 100%
+      height: 100%
+      left: 0
+      top: 0
+      +transition(opacity .2s ease-out)
+      background-color: #000
+      opacity: 0
+
     &--1
       background-color: #364c61
     &--2
@@ -120,6 +153,7 @@
       background-color: #bf3a2b
   &__text
     display: block
+    padding-top: 5px
     color: #fff
 .slider
   margin-top: 20px
