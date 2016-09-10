@@ -32,6 +32,7 @@
 .modal-content
   padding-left: 15px
   padding-right: 15px
+  display: block
 
 @each $ic in beauty
   .ic-#{$ic}
@@ -63,6 +64,16 @@
 @each $ic in sport
   .ic-#{$ic}
     +svgb(#{$ic}, 86, 86)
+@each $ic in bag
+  .ic-#{$ic}
+    +svgb(#{$ic}, 86, 86)
+@each $ic in info
+  .ic-#{$ic}
+    +svgb(#{$ic}, 86, 86)
+@each $ic in cheese
+  .ic-#{$ic}
+    +svgb(#{$ic}, 86, 86)
+
 +comment("home page style")
 .navbar-brand
   width: 100%
