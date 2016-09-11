@@ -82,6 +82,30 @@ $(document).ready(function () {
 
   });
   $('.map-keeper [data-href]').on('blur', function(e) {
+    e.preventDefault();
     $map_buble.hide();
   });
+  $('.map-keeper__btn').on('click', function (e) {
+    e.preventDefault();
+    var $this       = $(this),
+        $map        = $($this.data('toggle') ),
+        $map_width  = $map.width(),
+        $map_height = $map.height(),
+        $zoom       = 2;
+
+    if ($this.hasClass('js-x2') && ( $map.attr('data-aria') === 'false' )) {
+      $map.attr('data-aria', 'true');
+      console.log('x2');
+      $map.css({width: $map_width * $zoom, height: $map_height * $zoom});
+      $map.closest('.map-keeper').css('overflow-x', 'scroll');
+    } else {
+
+      if (!($this.hasClass('js-x2')) && ( $map.attr('data-aria') === 'true' )) {
+        $map.attr('data-aria','false');
+        console.log('x1');
+        $map.css({width: $map_width / $zoom, height: $map_height / $zoom});
+        $map.closest('.map-keeper').css('overflow-x', 'hidden');
+      } 
+    }
+ });
 });

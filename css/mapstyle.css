@@ -2,7 +2,17 @@
 .map-keeper{
   position: relative;
   width: 1010px;
-  margin: 0 auto;
+  margin: 15px auto;
+}
+.map-keeper svg {
+  -moz-transition: font-size 0.2s ease-out;
+  -o-transition: font-size 0.2s ease-out;
+  -webkit-transition: font-size 0.2s ease-out;
+  -ms-transition: font-size 0.2s ease-out;
+  transition: font-size 0.2s ease-out;
+}
+.map-keeper__zoom {
+  margin-top: 30px;
 }
 .map-bubble-title{
   margin: 0;
@@ -154,7 +164,6 @@
   border-left: 6px solid #fff;
   padding-left: 30px;
 }
-
 
 svg a{
   cursor: pointer;
