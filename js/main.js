@@ -55,10 +55,9 @@ $('.additional-legend-item').mouseover(function(){
 });
 
 $(document).ready(function () {
-  $map_buble = $('.map-bubble');
-
-  $('.map-keeper [data-href]').on('focus', function(e) {
-    e.preventDefault();
+  var $map_buble = $('.map-bubble'),
+      $map       = $('.map-keeper [data-href]');
+  $map.on('click', function(e) {
     var $svg          = $(this)[0].getBBox(),
     $svg_width        = $svg.width,
     $svg_height       = $svg.height,
@@ -71,6 +70,8 @@ $(document).ready(function () {
     $legend_url_text  = $($legend_item).text(),
     $legend_logo      = $($legend_item).data('logo');
 
+    $map_buble.hide();
+
     $map_buble.find('.map-bubble-logo').attr('src', $legend_logo);
     $map_buble.find('.map-bubble-url').attr($legend_url);
     $map_buble.find('.map-bubble-title a').attr('href', $legend_url);
@@ -80,18 +81,28 @@ $(document).ready(function () {
     $map_buble.css('top', $svg_top + $svg_height / 2);
     $map_buble.css('left', $svg_left + $svg_width / 2);
     $map_buble.show();
+
+    var firstClick = true;
+    $(document).bind('click.myEvent', function(e) {
+      if (!firstClick && $(e.target).closest($map).length == 0) {
+        $map_buble.hide();
+        $(document).unbind('click.myEvent');
+      }
+      firstClick = false;
+    });
+    e.preventDefault();
   });
 
    $('.legend-link').on('click', function(e) {
     e.preventDefault();
     var $svg_id       = $(this).attr('href'),
         $svg          = $('[data-href=' + $svg_id + ']');
-    $svg.triggerHandler('focus');
-  });
 
-  $('.map-keeper [data-href]').on('blur', function(e) {
-    e.preventDefault();
+    $('.legend-link').removeClass('active');
+    $(this).addClass('active');
     $map_buble.hide();
+    $(document).unbind('click.myEvent');
+    $svg.triggerHandler('click');
   });
 
   // zoom x1, x2 btn
