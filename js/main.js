@@ -57,12 +57,13 @@ $('.additional-legend-item').mouseover(function(){
 $(document).ready(function () {
   $map_buble = $('.map-bubble');
 
-  $('.map-keeper [data-href]').on('click', function(e) {
+  $('.map-keeper [data-href]').on('focus', function(e) {
     e.preventDefault();
-    var $svg_width    = $(this)[0].getBBox().width,
-    $svg_height       = $(this)[0].getBBox().height,
-    $svg_top          = $(this).position().top,
-    $svg_left         = $(this).position().left,
+    var $svg          = $(this)[0].getBBox(),
+    $svg_width        = $svg.width,
+    $svg_height       = $svg.height,
+    $svg_top          = $svg.y,
+    $svg_left         = $svg.x,
     $legend_link      = $(this).data('href'),
     $legend_item      = $('.main-legend').find('[href=' + $legend_link + ']').find('.legend-link-title'),
     $legend_descr     = $($legend_item).data('descr'),
@@ -79,12 +80,21 @@ $(document).ready(function () {
     $map_buble.css('top', $svg_top + $svg_height / 2);
     $map_buble.css('left', $svg_left + $svg_width / 2);
     $map_buble.show();
-
   });
+
+   $('.legend-link').on('click', function(e) {
+    e.preventDefault();
+    var $svg_id       = $(this).attr('href'),
+        $svg          = $('[data-href=' + $svg_id + ']');
+    $svg.triggerHandler('focus');
+  });
+
   $('.map-keeper [data-href]').on('blur', function(e) {
     e.preventDefault();
     $map_buble.hide();
   });
+
+  // zoom x1, x2 btn
   $('.map-keeper__btn').on('click', function (e) {
     e.preventDefault();
     var $this       = $(this),
