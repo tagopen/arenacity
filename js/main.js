@@ -71,25 +71,33 @@ $(document).ready(function () {
     $legend_logo      = $($legend_item).data('logo');
 
     $map_buble.hide();
+    if ($(this).closest('[data-aria]').attr('data-aria') == 'true') {
+      $svg_width *= 2;
+      $svg_height *= 2;
+      $svg_top *= 2;
+      $svg_left *= 2;
+    }
 
-    $map_buble.find('.map-bubble-logo').attr('src', $legend_logo);
-    $map_buble.find('.map-bubble-url').attr($legend_url);
-    $map_buble.find('.map-bubble-title a').attr('href', $legend_url);
-    $map_buble.find('.map-bubble-title a').text($legend_url_text);
-    $map_buble.find('.map-bubble-descr').text($legend_descr);
+    if ($legend_item.length != '0') {
+      $map_buble.find('.map-bubble-logo').attr('src', $legend_logo);
+      $map_buble.find('.map-bubble-url').attr($legend_url);
+      $map_buble.find('.map-bubble-title a').attr('href', $legend_url);
+      $map_buble.find('.map-bubble-title a').text($legend_url_text);
+      $map_buble.find('.map-bubble-descr').text($legend_descr);
 
-    $map_buble.css('top', $svg_top + $svg_height / 2);
-    $map_buble.css('left', $svg_left + $svg_width / 2);
-    $map_buble.show();
+      $map_buble.css('top', $svg_top + $svg_height / 2);
+      $map_buble.css('left', $svg_left + $svg_width / 2);
+      $map_buble.show();
 
-    var firstClick = true;
-    $(document).bind('click.myEvent', function(e) {
-      if (!firstClick && $(e.target).closest($map).length == 0) {
-        $map_buble.hide();
-        $(document).unbind('click.myEvent');
-      }
-      firstClick = false;
-    });
+      var firstClick = true;
+      $(document).bind('click.myEvent', function(e) {
+        if (!firstClick && $(e.target).closest($map).length == 0) {
+          $map_buble.hide();
+          $(document).unbind('click.myEvent');
+        }
+        firstClick = false;
+      });
+    }
     e.preventDefault();
   });
 
@@ -100,7 +108,6 @@ $(document).ready(function () {
 
     $('.legend-link').removeClass('active');
     $(this).addClass('active');
-    $map_buble.hide();
     $(document).unbind('click.myEvent');
     $svg.triggerHandler('click');
   });
@@ -116,14 +123,12 @@ $(document).ready(function () {
 
     if ($this.hasClass('js-x2') && ( $map.attr('data-aria') === 'false' )) {
       $map.attr('data-aria', 'true');
-      console.log('x2');
       $map.css({width: $map_width * $zoom, height: $map_height * $zoom});
       $map.closest('.map-keeper').css('overflow-x', 'scroll');
     } else {
 
       if (!($this.hasClass('js-x2')) && ( $map.attr('data-aria') === 'true' )) {
         $map.attr('data-aria','false');
-        console.log('x1');
         $map.css({width: $map_width / $zoom, height: $map_height / $zoom});
         $map.closest('.map-keeper').css('overflow-x', 'hidden');
       } 
